@@ -13,19 +13,20 @@
 #include <string.h>
 #include <sys/select.h>
 
-#define LEN 1024
-#define h_addr  h_addr_list[0]
-#define RED "\033[31m"
-#define GREEN "\033[32m"
-#define WHITE "\033[0m"
 
-void serverFunction( int );
+#define LEN       1024
+#define h_addr    h_addr_list[0]
+#define RED       "\033[31m"
+#define GREEN     "\033[32m"
+#define WHITE     "\033[0m"
+
 
 struct message {
-		char type[256];
-        char data[1024];
+    char    type[256];
+    char    data[LEN];
 };
 
-struct sockaddr_in serverAddress, clientAddress;
-struct message clientMessage;
-char userName[256];
+
+void serverFunction(int);
+
+

@@ -1,4 +1,4 @@
-all: server 
+all: server
 
 server : server.o
 	gcc -std=c99 -o server server.o -lpthread
